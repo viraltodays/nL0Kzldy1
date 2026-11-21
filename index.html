@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A little smile, a lot of happiness. 😊💕</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px 10px;
+        background: #0b0b0b;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    .video-container {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* =========================
+       ADSTERА BANNER
+    ========================== */
+    .ad-banner {
+        width: 100%;
+        min-height: 90px;
+        margin-bottom: 12px;
+        background: #151515;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    /* =========================
+       VIDEO PLAYER
+    ========================== */
+    .player {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        background: #000;
+    }
+
+    /* Hilangkan tombol fullscreen dari native control */
+    video::-webkit-media-controls-fullscreen-button {
+        display: none !important;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+    .viral-button {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        margin: 14px auto 0;
+        padding: 16px 20px;
+
+        background: linear-gradient(
+            135deg,
+            #ff1744,
+            #ff5722
+        );
+
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: .5px;
+
+        border-radius: 8px;
+
+        box-shadow:
+            0 5px 20px rgba(255, 23, 68, .3);
+
+        transition: .2s ease;
+    }
+
+    .viral-button:hover {
+        transform: translateY(-2px);
+        box-shadow:
+            0 8px 25px rgba(255, 23, 68, .45);
+    }
+
+    .viral-button:active {
+        transform: scale(.98);
+    }
+
+    /* MOBILE */
+    @media(max-width:600px) {
+
+        body {
+            padding: 10px 6px;
+        }
+
+        .ad-banner {
+            min-height: 70px;
+            border-radius: 5px;
+        }
+
+        .player {
+            border-radius: 6px;
+        }
+
+        .viral-button {
+            font-size: 16px;
+            padding: 14px 12px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="video-container">
+
+    <!-- ==================================
+         BANNER ADSTERRA
+         TEMPEL SCRIPT ADSTERRA DI SINI
+    =================================== -->
+    <div class="ad-banner">
+
+
+
+    </div>
+
+
+    <!-- ==================================
+         VIDEO PLAYER
+    =================================== -->
+    <div class="player">
+
+        <video
+            controls
+            playsinline
+            preload="metadata"
+            controlsList="nodownload noplaybackrate"
+            disablePictureInPicture
+            oncontextmenu="return false;">
+
+            <source
+                src="https://cdn2.videy.co/DQQlWX3V1.mp4"
+                type="video/mp4">
+
+            Browser Anda tidak mendukung video HTML5.
+
+        </video>
+
+    </div>
+
+
+    <!-- ==================================
+         VIRAL TODAY CTA
+    =================================== -->
+    <a
+        class="viral-button"
+        href="https://t.co/iLqjFN3LgI"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        🔥 VIRAL TODAY — CLICK HERE
+
+    </a>
+
+</div>
+
+
+<script>
+    const video = document.querySelector("video");
+
+    /*
+     * Mencegah beberapa shortcut fullscreen
+     * dari halaman.
+     */
+    document.addEventListener("keydown", function(e) {
+
+        if (
+            e.key === "F11" ||
+            e.key === "Escape"
+        ) {
+            return;
+        }
+
+    });
+
+    /*
+     * Mencegah menu klik kanan pada player
+     */
+    video.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    });
+</script>
+   <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5036646,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5036646&101" alt="free web stats" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+</html>
